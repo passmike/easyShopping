@@ -18,45 +18,54 @@ class ShoppingTableViewController: UITableViewController{
     @IBOutlet weak var myText4: UITextField!
     @IBOutlet weak var totalNT: UITextField!
     
-    var text1:Int = 0
-    var text2:Int = 0
-    var text3:Int = 0
-    var text4:Int = 0
+    @IBOutlet weak var stepperOutlet1: UIStepper!
+    @IBOutlet weak var stepperOutlet2: UIStepper!
+    @IBOutlet weak var stepperOutlet3: UIStepper!
+    @IBOutlet weak var stepperOutlet4: UIStepper!
     
     func tolalPrice(){
-        let total = text1 * 45 + text2 * 60 + text3 * 80 + text4 * 65
+        var total = Int(stepperOutlet1.value * 45 + stepperOutlet2.value * 60)
+            total = total + Int(stepperOutlet3.value * 80 + stepperOutlet4.value * 65)
         totalNT.text = "\(total)" + " 元"
     }
     
     @IBAction func myStepper1(_ sender: UIStepper) {
-        text1 = Int(sender.value)
-        myText1.text = "\(text1)"
+        let sender = Int(sender.value)
+        myText1.text = "\(sender)"
         tolalPrice()
     }
 
-    
     @IBAction func myStepper2(_ sender: UIStepper) {
-        text2 = Int(sender.value)
-        myText2.text = "\(text2)"
+        let sender = Int(sender.value)
+        myText2.text = "\(sender)"
         tolalPrice()
     }
-    
     
     @IBAction func myStepper3(_ sender: UIStepper) {
-        text3 = Int(sender.value)
-        myText3.text = "\(text3)"
+        let sender = Int(sender.value)
+        myText3.text = "\(sender)"
         tolalPrice()
     }
-    
     
     @IBAction func myStepper4(_ sender: UIStepper) {
-        text4 = Int(sender.value)
-        myText4.text = "\(text4)"
+        let sender = Int(sender.value)
+        myText4.text = "\(sender)"
         tolalPrice()
     }
     
+    @IBAction func clearButton(_ sender: UIButton) {
+        myText1.text = "0"
+        myText2.text = "0"
+        myText3.text = "0"
+        myText4.text = "0"
+        totalNT.text = "0 元"
+        stepperOutlet1.value = 0
+        stepperOutlet2.value = 0
+        stepperOutlet3.value = 0
+        stepperOutlet4.value = 0
+    }
     
-
+    
     
     
     

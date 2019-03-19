@@ -210,6 +210,15 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="98L-4t-gyx">
+                                                    <rect key="frame" x="32" y="8" width="107" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <state key="normal" title="清除"/>
+                                                    <connections>
+                                                        <action selector="clearButton:" destination="uMv-EO-miz" eventType="touchUpInside" id="CHx-gi-Va3"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="yaA-HW-bJ5" firstAttribute="centerX" secondItem="cM1-z2-gv8" secondAttribute="centerX" id="BmC-54-fOt"/>
@@ -231,6 +240,10 @@
                         <outlet property="myText2" destination="lqN-V9-Nao" id="xde-bv-r3o"/>
                         <outlet property="myText3" destination="0r1-a9-JEn" id="4J0-yX-zDH"/>
                         <outlet property="myText4" destination="1L4-WE-Xk8" id="luZ-cR-ax2"/>
+                        <outlet property="stepperOutlet1" destination="Rhy-KI-z5A" id="Csk-cR-GAh"/>
+                        <outlet property="stepperOutlet2" destination="E6U-zV-dcE" id="zeG-gG-joZ"/>
+                        <outlet property="stepperOutlet3" destination="g5v-2B-UcJ" id="nTF-6n-G1t"/>
+                        <outlet property="stepperOutlet4" destination="kce-fM-nj2" id="3dz-Cx-gMI"/>
                         <outlet property="totalNT" destination="xCD-gY-Isi" id="vHp-tl-7PL"/>
                     </connections>
                 </tableViewController>
